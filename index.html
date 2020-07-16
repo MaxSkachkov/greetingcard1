@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .back {
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            animation-name: backdiv;
+            animation-duration: 3500ms;
+            animation-iteration-count: infinite;
+        }
+
+        .heart {
+            position: absolute;
+            margin: auto;
+            top: 170px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: pink;
+            height: 150px;
+            width: 150px;
+            transform: rotate(-45deg);
+            animation-name: beat;
+            animation-duration: 3500ms;
+            animation-iteration-count: infinite;
+        }
+
+        .heart:after {
+            background-color: pink;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 0;
+            left: 80px;
+        }
+
+        .heart:before {
+            background-color: pink;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: -80px;
+            left: 0;
+        }
+
+        @keyframes backdiv {
+            50% {
+                background: #ffbe82;
+            }
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1) rotate(-45deg);
+            }
+
+            50% {
+                transform: scale(0.6) rotate(-45deg);
+            }
+        }
+
+        .bday {
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            width: 100%;
+            font-size: 45px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            color: #c402cf;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #fcd9ea;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="back">
+        <div class="bday">Happy birthday,<br> Angelika!</div>
+    </div>
+    <div class="heart"></div>
+</body>
+</html>
